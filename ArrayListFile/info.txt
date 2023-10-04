@@ -1,0 +1,3 @@
+Signe,12
+Sally,00
+Marley,10
