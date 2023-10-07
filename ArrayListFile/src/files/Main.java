@@ -13,7 +13,7 @@ public class Main {
         File file = new File("info.txt");
         try {
             Scanner scanner = new Scanner(file);
-            while (scanner.hasNextLine(file)) {
+            while (scanner.hasNextLine()) {
                 String s = scanner.nextLine();
                 String[] info = s.split(",");
                 Student stud = new Student(info[0], Integer.parseInt(info[1]));
@@ -25,7 +25,7 @@ public class Main {
             File toFile = new File("newstudent.txt");
             try {
                 FileWriter writer = new FileWriter(toFile);
-                for(Student sk : student) {
+                for (Student sk : students) {
                     writer.write(sk.toString());
                 }
                 writer.close();
@@ -37,3 +37,5 @@ public class Main {
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
         }
+    }
+}
